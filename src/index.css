@@ -1,0 +1,44 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+}
+
+.terminal {
+  height: 100vh;
+  padding: 20px;
+}
+
+.terminal-input {
+  display: flex;
+}
+
+.terminal-input input {
+  background: transparent;
+  border: none;
+  color: black;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  width: 100%;
+  padding: 0;
+}
+
+.terminal-input::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 1.2rem;
+  background-color: black;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: black;
+  }
+}
